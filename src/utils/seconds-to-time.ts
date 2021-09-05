@@ -4,5 +4,5 @@ export function secondsToTime(seconds: number): string {
   };
   const min = Math.floor((seconds / 60) % 60);
   const _seconds = seconds % 60;
-  return `${leftZero(min)}:${leftZero(_seconds)}s`;
+  return `${leftZero(min)}:${leftZero(_seconds)}`;
 }
