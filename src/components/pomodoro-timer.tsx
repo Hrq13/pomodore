@@ -53,7 +53,6 @@ export function PomodoroTimer(props: Props): JSX.Element {
   }, [
     props.activity,
     props.pomodoroTime,
-    bellStart,
     setMainTime,
     setTimeCounting,
     setWorking,
@@ -75,7 +74,14 @@ export function PomodoroTimer(props: Props): JSX.Element {
         setCurrentActivity('taking a short break');
       }
     },
-    [setWorking, setResting, setMainTime, setCurrentActivity, bellFinish],
+    [
+      setWorking,
+      setResting,
+      setMainTime,
+      setCurrentActivity,
+      props.longRestTime,
+      props.shortRestTime,
+    ],
   );
 
   useEffect(() => {
