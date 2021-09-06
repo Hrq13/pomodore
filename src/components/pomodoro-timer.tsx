@@ -25,15 +25,15 @@ export function PomodoroTimer(props: Props): JSX.Element {
   const [working, setWorking] = useState(false);
   const [resting, setResting] = useState(false);
   const [currentActivity, setCurrentActivity] = useState(props.activity);
-  const [cyclesQtdManager, setCyclesQtdManager] = useState(resetCycles());
 
   const [completedCyles, setCompletedCyles] = useState(0);
   const [fullWorkingTime, setFullWorkingTime] = useState(0);
   const [numberOfPomodoros, setNumberOfPomodoros] = useState(0);
 
-  function resetCycles() {
+  const resetCycles = useCallback(() => {
     return new Array(props.cycles - 1).fill(true);
-  }
+  }, [props.cycles]);
+  const [cyclesQtdManager, setCyclesQtdManager] = useState(resetCycles());
 
   useInterval(
     (): void => {
