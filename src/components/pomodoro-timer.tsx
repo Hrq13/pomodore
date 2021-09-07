@@ -140,9 +140,9 @@ export function PomodoroTimer(props: Props): JSX.Element {
         />
       </div>
       <div className="details">
-        <p>Ciclos concluídos: {completedCyles}</p>
-        <p>Horas trabalhadas: {secondsToTime(fullWorkingTime, true)}</p>
-        <p>Número de pomodoros: {numberOfPomodoros}</p>
+        <p>Completed cycles: {completedCyles}</p>
+        <p>Working hours: {secondsToTime(fullWorkingTime, true)}</p>
+        <p>Number of Pomodoros: {numberOfPomodoros}</p>
       </div>
     </div>
   );

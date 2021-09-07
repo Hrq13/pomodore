@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #41e1ba;
   transition: background-color 300ms ease-in-out;
   line-height: 1.5;
@@ -70,5 +72,24 @@ body {
 }
 
 .pomodoro .details {
-  margin: 20px 0;
+  margin: 20px 0 0;
+  /* font-weight: 600; */
+}
+
+@media screen and (max-width: 420px) {
+  .pomodoro h2 {
+    font-size: 22px;
+  }
+  body .pomodoro .timer {
+    font-size: 3em;
+  }
+  .pomodoro .controls {
+    flex-direction: column;
+  }
+  .pomodoro .btn {
+    width: 60%;
+  }
+  .pomodoro .btn + .btn {
+    margin-top: 15px;
+  }
 }
